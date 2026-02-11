@@ -10,9 +10,11 @@ function Users() {
     const fetchData = async () => {
       try {
         const apiBaseUrl = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api`;
+        const teamsEndpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`;
+        const usersEndpoint = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`;
         
         // Fetch teams first to create a mapping
-        const teamsResponse = await fetch(`${apiBaseUrl}/teams/`);
+        const teamsResponse = await fetch(teamsEndpoint);
         if (teamsResponse.ok) {
           const teamsData = await teamsResponse.json();
           const teamsArray = teamsData.results || teamsData;
@@ -24,7 +26,7 @@ function Users() {
         }
         
         // Fetch users
-        const usersResponse = await fetch(`${apiBaseUrl}/users/`);
+        const usersResponse = await fetch(usersEndpoint);
         if (!usersResponse.ok) {
           throw new Error(`HTTP error! status: ${usersResponse.status}`);
         }
