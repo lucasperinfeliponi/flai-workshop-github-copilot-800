@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#4F46E5"/>
+  <circle cx="32" cy="32" r="28" fill="#818CF8"/>
+  
+  <!-- Simplified octopus face -->
+  <circle cx="32" cy="28" r="16" fill="#1B2A4A"/>
+  
+  <!-- Eyes -->
+  <circle cx="26" cy="26" r="3" fill="white"/>
+  <circle cx="38" cy="26" r="3" fill="white"/>
+  <circle cx="27" cy="25" r="1.5" fill="#1E293B"/>
+  <circle cx="39" cy="25" r="1.5" fill="#1E293B"/>
+  
+  <!-- Smile -->
+  <path d="M 26 32 Q 32 36 38 32" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Trophy star -->
+  <text x="32" y="52" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#F97316" text-anchor="middle">★</text>
+</svg>

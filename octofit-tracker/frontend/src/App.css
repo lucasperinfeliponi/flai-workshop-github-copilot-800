@@ -1,0 +1,466 @@
+/* OctoFit Tracker - Modern Clean Theme */
+
+:root {
+  --bg: #F0F2F5;
+  --bg-card: #FFFFFF;
+  --bg-dark: #1B2A4A;
+  --bg-darker: #111D35;
+  
+  --accent: #4F46E5;
+  --accent-light: #818CF8;
+  --accent-dark: #3730A3;
+  
+  --teal: #0D9488;
+  --teal-light: #5EEAD4;
+  
+  --orange: #F97316;
+  --orange-light: #FDBA74;
+
+  --pink: #EC4899;
+
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --text-white: #FFFFFF;
+  
+  --border: #E2E8F0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.12);
+  --radius: 12px;
+}
+
+/* Reset & Base */
+.App {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Navbar ─── */
+.navbar {
+  background: var(--bg-dark) !important;
+  box-shadow: var(--shadow-md);
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  color: var(--text-white) !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 0.2s;
+}
+
+.navbar-brand:hover {
+  opacity: 0.85;
+  color: var(--text-white) !important;
+}
+
+.octofit-logo {
+  height: 36px;
+  width: auto;
+}
+
+.nav-link {
+  color: rgba(255,255,255,.75) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,.1);
+}
+
+/* ─── Page Header ─── */
+.page-header {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--teal) 100%);
+  color: white;
+  padding: 2.5rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.page-header::before {
+  display: none;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  position: relative;
+  z-index: 1;
+  text-shadow: none;
+}
+
+.page-header .lead {
+  opacity: 0.9;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  text-shadow: none;
+}
+
+/* ─── Table Wrapper ─── */
+.table-wrapper {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+/* ─── Tables ─── */
+.table {
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.table thead {
+  background: var(--bg-dark);
+  color: white;
+  border-bottom: none;
+}
+
+.table thead th {
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  padding: 1rem;
+  text-shadow: none;
+}
+
+.table tbody tr {
+  transition: background 0.2s;
+  background: transparent;
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr:hover {
+  background: #F8FAFC;
+  transform: none;
+  box-shadow: none;
+  border-left: none;
+}
+
+.table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* ─── Cards ─── */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--accent), var(--teal));
+  color: white;
+  font-weight: 700;
+  border: none;
+  text-transform: none;
+  letter-spacing: 0;
+  text-shadow: none;
+  border-bottom: none;
+  padding: 1rem 1.25rem;
+}
+
+.card-body {
+  background: transparent;
+  padding: 1.25rem;
+}
+
+.card-footer {
+  background: #FAFBFC !important;
+  border-top: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+}
+
+.card-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.card-title {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* ─── Badges ─── */
+.badge {
+  padding: 0.4rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: none;
+  letter-spacing: 0;
+  border: none;
+  text-shadow: none;
+  border-radius: 6px;
+}
+
+.badge.bg-primary {
+  background: var(--accent) !important;
+}
+
+.badge.bg-info {
+  background: var(--teal) !important;
+  color: #fff !important;
+}
+
+.badge.bg-success {
+  background: #16A34A !important;
+}
+
+.badge.bg-warning {
+  background: var(--orange) !important;
+  color: #fff !important;
+}
+
+.badge.bg-danger {
+  background: var(--pink) !important;
+}
+
+.badge.bg-secondary {
+  background: var(--text-secondary) !important;
+}
+
+/* ─── Buttons ─── */
+.btn {
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: all 0.2s;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  border-color: transparent;
+}
+
+.btn-success {
+  background: #16A34A;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #15803D;
+  border-color: transparent;
+}
+
+.btn-info {
+  background: var(--teal);
+  color: white;
+}
+
+.btn-info:hover {
+  background: #0F766E;
+  border-color: transparent;
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.btn-sm {
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+}
+
+/* ─── Loading ─── */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.spinner-border {
+  border: 4px solid var(--accent-light);
+  border-right-color: transparent;
+  width: 3rem;
+  height: 3rem;
+}
+
+/* ─── Rank Badges ─── */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: none;
+  text-shadow: none;
+}
+
+.rank-1 {
+  background: linear-gradient(135deg, #FBBF24, #F59E0B);
+  color: #78350F;
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.5);
+}
+
+.rank-2 {
+  background: linear-gradient(135deg, #D1D5DB, #9CA3AF);
+  color: #374151;
+}
+
+.rank-3 {
+  background: linear-gradient(135deg, #D97706, #B45309);
+  color: #fff;
+}
+
+.rank-other {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ─── Alerts ─── */
+.alert {
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-danger {
+  background: #FEF2F2;
+  border-left: 4px solid #EF4444;
+  color: #991B1B;
+}
+
+.alert-info {
+  background: #EFF6FF;
+  border-left: 4px solid var(--accent);
+  color: var(--accent-dark);
+}
+
+.alert-heading {
+  font-weight: 700;
+}
+
+/* ─── Headings ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.display-3, .display-4 {
+  font-weight: 800;
+  text-shadow: none;
+  color: white;
+}
+
+.h4 {
+  color: var(--text-primary);
+  text-shadow: none;
+  font-size: 1.2rem;
+}
+
+/* ─── Links ─── */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* ─── Text ─── */
+.text-muted {
+  color: var(--text-secondary) !important;
+}
+
+strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,.9);
+}
+
+/* ─── Animations ─── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .octofit-logo {
+    height: 28px;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-header {
+    padding: 1.8rem 0;
+  }
+}
